@@ -249,6 +249,7 @@ main {
 }
 
 .me .me__description {
+  margin-top: 2em;
   width: 75%;
   font-size: 3em;
   font-weight: 400;
@@ -259,11 +260,15 @@ main {
 .me .long .me__description {
   width: 90%;
   font-size: 1.4em;
-  font-weight: 300;
   line-height: 1.4em;
 }
 
+.me .me__description strong {
+  font-weight: 600;
+}
+
 .me .me__more {
+  margin-left: 1em;
   font-size: 2em;
   color: #7f7f7f;
   line-height: 1.2em;
@@ -289,8 +294,25 @@ main {
     height: 85vh;
   }
 
+  .me .me__content {
+    height: 100%;
+  }
+
   .me .me__description {
+    margin-top: 0;
     width: 100%;
+    overflow: hidden;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    -webkit-line-clamp: 22;
+    -webkit-box-orient: vertical;
+  }
+
+  .me .me__more {
+    margin-left: 0;
   }
 }
 
