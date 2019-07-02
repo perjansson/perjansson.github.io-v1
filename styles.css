@@ -82,6 +82,69 @@ mobile              @media (min-width: 320px) and (max-width: 480px) {}
   animation: flip 1000ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
+@-webkit-keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+    background: #fff;
+    color: #000;
+  }
+  42% {
+    opacity: 0;
+    background: #000;
+    color: #fff;
+  }
+  43% {
+    opacity: 1;
+    background: #fff;
+    color: #000;
+  }
+  48% {
+    opacity: 0;
+    background: #000;
+    color: #fff;
+  }
+  49% {
+    opacity: 1;
+    background: #fff;
+    color: #000;
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+    background: #fff;
+    color: #000;
+  }
+  42% {
+    opacity: 0;
+    background: #000;
+    color: #fff;
+  }
+  43% {
+    opacity: 1;
+    background: #fff;
+    color: #000;
+  }
+  48% {
+    opacity: 0;
+    background: #000;
+    color: #fff;
+  }
+  49% {
+    opacity: 1;
+    background: #fff;
+    color: #000;
+  }
+}
+
+.flicker {
+  -webkit-animation: flicker 1000ms linear 5s both;
+  animation: flicker 1000ms linear 5s both;
+}
+
 .grow {
   transition: all 0.2s ease-in-out;
 }
@@ -114,6 +177,7 @@ body {
   margin: 0;
   font-size: 22px;
   height: 100%;
+  color: #000;
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
