@@ -342,16 +342,156 @@ var content = {
             tags: ['android', 'java', 'android studio', 'scrum']
         },
         {
-            title: '',
-            description: '',
-            me: '',
-            tags: []
+            title: 'Planning and sorting system for Swedish Postal Service',
+            description:
+                'A system to improve the planning and sorting of incoming and outgoing parcels for the Swedish postal service.',
+            me:
+                'Development with frontend responsibility to make sure the system was intuitive and easy to use. Held workshops with end users about how the interface should look like.',
+            tags: [
+                'jsf',
+                'richfaces',
+                'seam',
+                'html',
+                'css',
+                'javascript',
+                'java ee',
+                'ejb2',
+                'bibernate',
+                'sculptur',
+                'eclipse',
+                'svn',
+                'maven',
+                'hudson',
+                'tdd',
+                'ddd',
+                'rup'
+            ]
         },
         {
-            title: '',
-            description: '',
-            me: '',
-            tags: []
+            title: 'Automatic Payments for Länsförsäkringar Bank',
+            description:
+                'Change several existing bank systems to make sure they worked after a backend system for automatic payments was updated.',
+            me:
+                'Technical project manager and developer which involved planning and being part of the implementation.',
+            tags: [
+                'jsf',
+                'struts',
+                'java',
+                'spring',
+                'hibernate',
+                'eclipse',
+                'svn',
+                'maven',
+                'jenkins',
+                'xp',
+                'scrum'
+            ]
+        },
+        {
+            title: 'Proof Of Concept new Internet bank for SEB (Bank)',
+            description:
+                'A Proof of concept application to prove that a current internet banking solution could be modified to work for another bank.',
+            me:
+                'Developer and development lead to show how we worked with planning, analysis, design, development, test and release.',
+            tags: [
+                'jsf',
+                'myfaces',
+                'html',
+                'css',
+                'javascript',
+                'java',
+                'spring',
+                'hibernate',
+                'eclipse',
+                'svn',
+                'maven',
+                'xp',
+                'rup'
+            ]
+        },
+        {
+            title: 'New Internet Bank for Länsförsäkringar Bank',
+            description:
+                'Build a new shiny internet bank with new technologies, frameworks and most importantly new functionality. ',
+            me:
+                'Developer and front end specialist to make sure that the selected technologies played well together when both rebuilding existing functionality but also when adding new.',
+            tags: [
+                'jsf',
+                'myfaces',
+                'shale',
+                'html',
+                'css',
+                'javascript',
+                'java',
+                'spring',
+                'hibernate',
+                'eclipse',
+                'svn',
+                'maven',
+                'apache continuum',
+                'xp',
+                'rup'
+            ]
+        },
+        {
+            title: 'Change bank application for Länsförsäkringar Bank',
+            description:
+                'A system to support bank officers help new customers move all of their existing engagement from other banks to Länsförsäkringar Bank.',
+            me: 'Developer with front end responsibility.',
+            tags: [
+                'jsf',
+                'myfaces',
+                'shale',
+                'html',
+                'css',
+                'javascript',
+                'java',
+                'spring',
+                'hibernate',
+                'eclipse',
+                'svn',
+                'maven',
+                'apache continuum',
+                'xp',
+                'rup'
+            ]
+        },
+        {
+            title: 'Bank officers secure communication',
+            description:
+                'a system to enable a secure communication channel between bank officers and bank customers via the internet bank and an internal bank officer application.',
+            me: 'Developer with front end responsibility.',
+            tags: [
+                'struts',
+                'html',
+                'css',
+                'javascript',
+                'java ee',
+                'ejb 3',
+                'hibernate',
+                'eclipse',
+                'cvs',
+                'ant',
+                'rup'
+            ]
+        },
+        {
+            title: 'Internet bank for SEB (Bank) in Germany',
+            description: 'A new internet bank for SEB in Germany.',
+            me: 'Developer with fullstack responsibility.',
+            tags: [
+                'struts',
+                'html',
+                'css',
+                'javascript',
+                'java ee',
+                'ejb 3',
+                'hibernate',
+                'eclipse',
+                'cvs',
+                'ant',
+                'rup'
+            ]
         }
     ]
 };
