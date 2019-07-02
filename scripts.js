@@ -232,16 +232,23 @@ document
 var meContent = document.querySelector('.me__content');
 document.querySelector('.me .me__more').addEventListener('click', function() {
     var toLong = !meContent.classList.contains('long');
+    meContent.classList.add('flip');
     meContent.style.opacity = 0;
+
     setTimeout(function() {
         document.querySelector('.me .me__description').innerHTML = toLong
             ? content.me.long
             : content.me.short;
-    }, 1000);
+
+        if (toLong) meContent.classList.add('long');
+        else meContent.classList.remove('long');
+    }, 500);
+
     setTimeout(function() {
         meContent.style.opacity = 1;
-        toLong
-            ? meContent.classList.add('long')
-            : meContent.classList.remove('long');
+    }, 600);
+
+    setTimeout(function() {
+        meContent.classList.remove('flip');
     }, 1000);
 });
