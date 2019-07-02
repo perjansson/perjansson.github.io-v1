@@ -55,17 +55,6 @@ mobile              @media (min-width: 320px) and (max-width: 480px) {}
   transform-origin: center bottom;
 }
 
-@keyframes marquee {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
 .grow {
   transition: all 0.2s ease-in-out;
 }
@@ -160,30 +149,47 @@ main {
   letter-spacing: 0em;
 }
 
+.me .me__content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  transition: opacity 1s ease-in-out;
+}
+
 .me .me__description {
-  margin: 1.5em 25% 0 0;
+  width: 75%;
+  margin: 1.5em 0 0 0;
   font-size: 3em;
   font-weight: 400;
   line-height: 1.2em;
   cursor: pointer;
+}
 
-  overflow: hidden;
-  white-space: pre-wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block; /* Fallback for non-webkit */
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
+.me .long .me__description {
+  width: 90%;
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1.4em;
+}
+
+.me .me__more {
+  font-size: 2em;
+  color: #7f7f7f;
+  line-height: 1.2em;
+  cursor: pointer;
+}
+
+.me .me__more::after {
+  content: "►";
+}
+
+.me .long .me__more::after {
+  content: "◄";
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .me {
     height: 92vh;
-  }
-
-  .me .me__description {
-    -webkit-line-clamp: 9;
   }
 }
 
@@ -193,22 +199,16 @@ main {
   }
 
   .me .me__description {
-    margin-right: 0;
-    -webkit-line-clamp: 9;
+    width: 100%;
   }
 }
-
-/* .me .me__img {
-        margin: 24px 0 48px 0;
-        height: 600px;
-      } */
 
 .projects {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 2em 8em 72px 8em;
+  padding: 2em 14em 72px 14em;
   overflow-x: hidden;
 }
 
@@ -272,8 +272,20 @@ main {
   border: 1px dashed #bfbfbf;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .projects {
+    padding: 3em 3em 36px 3em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .projects {
+    padding: 3em 3em 36px 3em;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .projects {
-    padding: 3em 4em 36px 4em;
+    padding: 3em 3em 36px 3em;
   }
 }

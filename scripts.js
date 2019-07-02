@@ -4,7 +4,7 @@ var content = {
         title: 'Fullstack Web Developer',
         short:
             "Hi I'm Per, a curious software developer with a passion to build great stuff and help others do the same.",
-        desc:
+        long:
             'My core skills are in fullstack web development and, although I’m no stranger to backend, I’ve always been drawn to the frontend side. I like the things that are visual and that a user interacts with and I have many years of experience in how to build systems and applications that are a good mix of quality, robustness and ease of use. I really enjoy working with Node, React and JavaScript in general, but I also have done a lot of Java previously together with both Android och iOS development. I addition to that I also like the architectural part of how a solid frontend is created together with making the Developer Experience really good for the current team so it’s a joy to work with.'
     },
     projects: [
@@ -29,7 +29,7 @@ var content = {
             ]
         },
         {
-            title: 'Unibet Frontend at Kindred Group',
+            title: 'Unibet Frontend for Kindred Group',
             description:
                 'Several different betting websites built using web technologies and using configuration of a headless CMS to create the final experience for the client.',
             me:
@@ -75,10 +75,35 @@ var content = {
             ]
         },
         {
-            title: '',
-            description: '',
-            me: '',
-            tags: ''
+            title: 'Insourcing Matchmaking Tool for EY',
+            description:
+                'A web application that act as a matchmaking tool to find the best candidate of insourced consultants and employees for a given client and project. Also a back-office module for administrators and consultants to manage their skills, CVs, personal video, details etc.',
+            me:
+                "Responsible for building the full experience, ie. the client, a responsive web app that's both fast and intuitive to use, and the server with business logic, a nodejs app with mongodb as persistence.",
+            tags: [
+                'javascript',
+                'angular',
+                'ngxs',
+                'react',
+                'graphql',
+                'apollo',
+                'sass',
+                'animate.css',
+                'express',
+                'jwt',
+                'passport',
+                'lodash',
+                'node',
+                'npm',
+                'webpack',
+                'typescript',
+                'mongodb',
+                'heroku',
+                'aws s3',
+                'mlab',
+                'papertrail',
+                'pushover'
+            ]
         },
         {
             title: '',
@@ -173,20 +198,20 @@ sr.reveal('.me__description', {
     delay: 1500
 });
 
-sr.reveal('.projects', {});
+sr.reveal('.me__more', {
+    distance: '100%',
+    origin: 'left',
+    duration: 1000,
+    delay: 2500
+});
+
+sr.reveal('.projects');
 
 sr.reveal('.projects__header', {
     scale: 0.9,
     duration: 1000,
     delay: 2500
 });
-
-// sr.reveal(".me__img", {
-//   origin: "right",
-//   scale: 0.5,
-//   duration: 1000,
-//   delay: 1000
-// });
 
 sr.reveal('.project', {
     distance: '25%',
@@ -203,3 +228,20 @@ document
     .addEventListener('click', function() {
         zenscroll.to(projectsHeader);
     });
+
+var meContent = document.querySelector('.me__content');
+document.querySelector('.me .me__more').addEventListener('click', function() {
+    var toLong = !meContent.classList.contains('long');
+    meContent.style.opacity = 0;
+    setTimeout(function() {
+        document.querySelector('.me .me__description').innerHTML = toLong
+            ? content.me.long
+            : content.me.short;
+    }, 1000);
+    setTimeout(function() {
+        meContent.style.opacity = 1;
+        toLong
+            ? meContent.classList.add('long')
+            : meContent.classList.remove('long');
+    }, 1000);
+});
