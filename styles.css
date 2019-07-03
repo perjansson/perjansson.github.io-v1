@@ -5,6 +5,7 @@ Hex       RGB
 #404040             (64,64,64)
 #7f7f7f             (127,127,127)
 #bfbfbf             (191,191,191)
+#fcfcfc             (252,252,252)
 #ffffff             (255,255,255)
 
 MEDIA QUERIES
@@ -180,6 +181,13 @@ body {
   color: #000;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #404040;
+}
+
 @media (min-width: 1025px) and (max-width: 1280px) {
   body {
     font-size: 18px;
@@ -205,7 +213,7 @@ body {
 }
 
 main {
-  margin: 0 1em;
+  padding: 0 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,13 +226,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 85vh;
   overflow: hidden;
 }
 
 .me .me__header {
   width: 100%;
-  margin: 16px 0 24px 0;
+  margin: 1em 0 1em 0;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -238,6 +245,12 @@ main {
   color: #404040;
   text-transform: uppercase;
   letter-spacing: 0em;
+}
+
+.me .me__contact {
+  text-align: center;
+  font-size: 0.9em;
+  margin: 0.75em 0 2em 0;
 }
 
 .me .me__content {
@@ -259,8 +272,8 @@ main {
 
 .me .long .me__description {
   width: 90%;
-  font-size: 1.4em;
-  line-height: 1.4em;
+  font-size: 1.1em;
+  line-height: 1.5em;
 }
 
 .me .me__description strong {
@@ -283,15 +296,10 @@ main {
   content: "◄";
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .me {
-    height: 92vh;
-  }
-}
-
 @media (min-width: 320px) and (max-width: 480px) {
-  .me {
-    height: 85vh;
+  .me .me__contact {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   .me .me__content {
@@ -307,8 +315,13 @@ main {
     text-overflow: ellipsis;
     display: block; /* Fallback for non-webkit */
     display: -webkit-box;
-    -webkit-line-clamp: 22;
+    -webkit-line-clamp: 20;
     -webkit-box-orient: vertical;
+  }
+  .me .long .me__description {
+    margin-top: 2em;
+    font-size: 1.2em;
+    line-height: 1.3em;
   }
 
   .me .me__more {
@@ -321,12 +334,11 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 2em 14em 72px 14em;
-  overflow-x: hidden;
+  margin: 2em 14em 72px 14em;
 }
 
 .projects .projects__header {
-  margin: 0 0 1em 0;
+  margin: 1em 0 1em 0;
   font-size: 2em;
   color: #7f7f7f;
   cursor: pointer;
@@ -375,7 +387,7 @@ main {
 .projects .project .project__tags,
 .projects .project .project__tags * {
   font-weight: 200;
-  color: #7f7f7f;
+  color: #404040;
 }
 
 .projects .project .project__tags > * {
@@ -383,22 +395,27 @@ main {
   margin: 0 5px 5px 0;
   padding: 5px;
   border: 1px dashed #bfbfbf;
+  background: #fcfcfc;
+}
+
+.projects .project .project__tags > *:hover {
+  background: #ececec;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .projects {
-    padding: 3em 3em 36px 3em;
+    margin: 3em 3em 36px 3em;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .projects {
-    padding: 3em 3em 36px 3em;
+    margin: 3em 3em 36px 3em;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .projects {
-    padding: 3em 3em 36px 3em;
+    margin: 3em 3em 36px 3em;
   }
 }
