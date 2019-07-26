@@ -1,0 +1,75 @@
+/*
+COLORS
+Hex       RGB
+#000000             (0,0,0)
+#404040             (64,64,64)
+#7f7f7f             (127,127,127)
+#bfbfbf             (191,191,191)
+#fcfcfc             (252,252,252)
+#ffffff             (255,255,255)
+
+MEDIA QUERIES
+desktop             @media (min-width: 1281px) {}
+laptop              @media (min-width: 1025px) and (max-width: 1280px) {}
+tablet landscape    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+tablet portrait     @media (min-width: 768px) and (max-width: 1024px) {}
+mobile              @media (min-width: 320px) and (max-width: 480px) {}
+*/
+
+* {
+    /* font-family: "Source Code Pro", monospace; */
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
+body {
+    margin: 0;
+    font-size: 22px;
+    height: 100%;
+    color: #000;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #404040;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
