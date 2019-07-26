@@ -49,14 +49,14 @@
 </style>
 
 <div class="project-container" id={`project-${id}-container`}>
-  <div class="title"> {title} </div>
+  <div class="title">{title}</div>
   <div class="description">
     <span class="prefix">Desc:</span>
-     {description}
+    {description}
   </div>
   <div class="me">
     <span class="prefix">Me:</span>
-     {me}
+    {me}
   </div>
   <Tags {tags} />
 </div>

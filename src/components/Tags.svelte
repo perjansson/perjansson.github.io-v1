@@ -23,7 +23,7 @@
 </style>
 
 <div class="tags">
-  {#each tags as tag, i}
-    <span> {tag} </span>
+  {#each tags as tag}
+    <span>{tag}</span>
   {/each}
 </div>

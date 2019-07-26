@@ -1,19 +1,24 @@
 <script>
+  import { onMount } from "svelte";
   import Project from "./Project.svelte";
 
   export let projects;
 
-  setTimeout(() => {
-    ScrollReveal().reveal("#projects-container");
-    ScrollReveal().reveal("#projects-header", {
-      scale: 0.9,
-      duration: 1000,
-      delay: 2500
-    });
-  }, 500);
+  let containerEl;
+  let header;
 
-  const scrollToHeader = () =>
-    zenscroll.to(document.querySelector("#projects-header"));
+  onMount(() => {
+    setTimeout(() => {
+      ScrollReveal().reveal(containerEl);
+      ScrollReveal().reveal(header, {
+        scale: 0.9,
+        duration: 1000,
+        delay: 2500
+      });
+    }, 500);
+  });
+
+  const scrollToHeader = () => zenscroll.to(header);
 </script>
 
 <style>
@@ -23,37 +28,28 @@
     53%,
     80%,
     to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
       animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
 
     40%,
     43% {
-      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
       animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-      -webkit-transform: translate3d(0, -30px, 0);
       transform: translate3d(0, -30px, 0);
     }
 
     70% {
-      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
       animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-      -webkit-transform: translate3d(0, -15px, 0);
       transform: translate3d(0, -15px, 0);
     }
 
     90% {
-      -webkit-transform: translate3d(0, -4px, 0);
       transform: translate3d(0, -4px, 0);
     }
   }
 
   .bounce {
-    -webkit-animation-name: bounce;
     animation-name: bounce;
-    -webkit-transform-origin: center bottom;
     transform-origin: center bottom;
   }
 
@@ -102,8 +98,8 @@
   }
 </style>
 
-<div class="projects-container" id="projects-container">
-  <div class="header" id="projects-header" on:click={scrollToHeader}>
+<div class="projects-container" bind:this={containerEl}>
+  <div class="header" bind:this={header} on:click={scrollToHeader}>
     <div class="bounce">Stuff I've done ▼</div>
   </div>
   <ol class="list">
