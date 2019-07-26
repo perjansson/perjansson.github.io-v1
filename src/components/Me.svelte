@@ -1,46 +1,49 @@
 <script>
+  import { onMount } from "svelte";
+  import ContactList from "./ContactList.svelte";
+
   export let name;
   export let title;
   export let contacts;
   export let short;
   export let long;
 
-  setTimeout(() => {
-    function isSmallScreen() {
-      return window.matchMedia("(max-width: 480px)").matches;
-    }
+  const isSmallScreen = () => window.matchMedia("(max-width: 480px)").matches;
 
-    const factor = isSmallScreen() ? 0.85 : 0.8;
-    document.querySelector("#me-container").style.height =
-      window.innerHeight * factor + "px";
+  onMount(() => {
+    setTimeout(() => {
+      const factor = isSmallScreen() ? 0.85 : 0.8;
+      document.querySelector(".me-container").style.height =
+        window.innerHeight * factor + "px";
 
-    ScrollReveal().reveal("#me-header", {
-      distance: "150%",
-      origin: "top",
-      duration: 1000
-    });
+      ScrollReveal().reveal(".me-container .header", {
+        distance: "150%",
+        origin: "top",
+        duration: 1000
+      });
 
-    ScrollReveal().reveal("#me-description", {
-      scale: 0.9,
-      duration: 1000,
-      delay: 1000
-    });
+      ScrollReveal().reveal(".me-container .description", {
+        scale: 0.9,
+        duration: 1000,
+        delay: 1000
+      });
 
-    ScrollReveal().reveal("#me-contact", {
-      distance: "20%",
-      origin: "left",
-      scale: 0.9,
-      duration: 1000,
-      delay: 1500
-    });
+      ScrollReveal().reveal(".me-container .contact", {
+        distance: "20%",
+        origin: "left",
+        scale: 0.9,
+        duration: 1000,
+        delay: 1500
+      });
 
-    ScrollReveal().reveal("#me-more", {
-      distance: "100%",
-      origin: "left",
-      duration: 1000,
-      delay: 2500
-    });
-  }, 500);
+      ScrollReveal().reveal(".me-container .more", {
+        distance: "100%",
+        origin: "left",
+        duration: 1000,
+        delay: 2500
+      });
+    }, 500);
+  });
 </script>
 
 <style>
@@ -143,7 +146,7 @@
       -webkit-line-clamp: 20;
       -webkit-box-orient: vertical;
     }
-    .me .long .me__description {
+    .me .long .description {
       margin-top: 2em;
       font-size: 1.2em;
       line-height: 1.3em;
@@ -155,16 +158,18 @@
   }
 </style>
 
-<div class="me-container" id="me-container">
-  <div class="header" id="me-header">
+<div class="me-container">
+  <div class="header">
     <div class="name">{name}</div>
     <div class="title">{title}</div>
   </div>
-  <div class="contact" id="me-contact" />
+  <div class="contact">
+    <ContactList {contacts} />
+  </div>
   <div class="content">
-    <div class="description" id="me-description">
+    <div class="description">
       {@html short}
     </div>
-    <div class="more" id="me-more" />
+    <div class="more" />
   </div>
 </div>
