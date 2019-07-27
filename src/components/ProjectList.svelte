@@ -59,6 +59,7 @@
     align-items: center;
     justify-content: flex-start;
     margin: 2em 14em 72px 14em;
+    max-width: 1400px;
   }
 
   .header {
@@ -80,19 +81,19 @@
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    .container {
+    .projects-container {
       margin: 3em 3em 36px 3em;
     }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .container {
+    .projects-container {
       margin: 3em 3em 36px 3em;
     }
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
-    .container {
+    .projects-container {
       margin: 3em 3em 36px 3em;
     }
   }

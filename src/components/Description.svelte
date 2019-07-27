@@ -68,6 +68,16 @@
     cursor: pointer;
   }
 
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .short .description {
+      font-size: 2em;
+    }
+
+    .long .description {
+      font-size: 0.9em;
+    }
+  }
+
   @media (min-width: 320px) and (max-width: 480px) {
     .description {
       width: 100%;

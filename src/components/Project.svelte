@@ -27,7 +27,7 @@
   }
 
   .title {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 700;
   }
 
@@ -52,7 +52,7 @@
   <div class="title">{title}</div>
   <div class="description">
     <span class="prefix">Desc:</span>
-    {description}
+    {@html description}
   </div>
   <div class="me">
     <span class="prefix">Me:</span>

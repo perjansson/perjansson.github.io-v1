@@ -38,7 +38,7 @@
 </script>
 
 <style>
-  .container {
+  .me-container {
     padding: 0 0 24px 0;
     display: flex;
     flex-direction: column;
@@ -93,7 +93,7 @@
   }
 </style>
 
-<div class="container" bind:this={containerEl}>
+<div class="me-container" bind:this={containerEl}>
   <div class="header" bind:this={headerEl}>
     <div class="name">{name}</div>
     <div class="title">{title}</div>
