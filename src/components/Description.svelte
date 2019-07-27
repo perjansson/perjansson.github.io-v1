@@ -18,10 +18,9 @@
       });
 
       ScrollReveal().reveal(moreEl, {
-        distance: "100%",
-        origin: "left",
+        scale: 0.0,
         duration: 1000,
-        delay: 2500
+        delay: 1000
       });
     }, 500);
   });
@@ -65,6 +64,7 @@
     font-size: 2em;
     color: #7f7f7f;
     line-height: 1.2em;
+    text-align: center;
     cursor: pointer;
   }
 
@@ -77,8 +77,13 @@
       text-overflow: ellipsis;
       display: block; /* Fallback for non-webkit */
       display: -webkit-box;
-      -webkit-line-clamp: 20;
+      -webkit-line-clamp: 30;
       -webkit-box-orient: vertical;
+    }
+
+    .short .description {
+      flex: 10;
+      font-size: 2.5em;
     }
 
     .long .description {
@@ -89,6 +94,7 @@
 
     .more {
       margin-left: 0;
+      padding-top: 180px;
     }
   }
 </style>

@@ -11,9 +11,9 @@
     setTimeout(() => {
       ScrollReveal().reveal(containerEl);
       ScrollReveal().reveal(header, {
-        scale: 0.9,
+        scale: 0.8,
         duration: 1000,
-        delay: 2500
+        delay: 3000
       });
     }, 500);
   });
@@ -70,7 +70,7 @@
 
   .header .bounce {
     animation-duration: 1s;
-    animation-delay: 3s;
+    animation-delay: 4s;
     animation-fill-mode: both;
   }
 

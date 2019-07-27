@@ -88,6 +88,7 @@
 
     .content {
       height: 100%;
+      padding-left: 20px;
     }
   }
 </style>
