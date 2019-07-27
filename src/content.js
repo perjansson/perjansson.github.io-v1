@@ -1,4 +1,4 @@
-var content = {
+export default {
     me: {
         name: 'Per Jansson',
         title: 'Fullstack Web Developer',
@@ -37,7 +37,7 @@ var content = {
             }
         ],
         short:
-            'Hi I\'m Per, a <strong>curious</strong> software developer with a passion to <strong>build great stuff</strong> and help others do the same.',
+            "Hi I'm Per, a <strong>curious</strong> software developer with a passion to <strong>build great stuff</strong> and help others do the same.",
         long:
             'My core skills are in fullstack <strong>web development</strong> and, although I’m no stranger to backend, I’ve always been drawn to the <strong>frontend</strong> side. I like the things that are visual and that a user interacts with and I have many years of experience in how to build systems and applications that are a good mix of <strong>quality, robustness and ease of use</strong>. I really enjoy working with <strong>Node, React and JavaScript</strong> in general, but I also have done a lot of Java previously together with both Android och iOS development. I addition to that I also like the architectural part of how a solid frontend is created together with making the <strong>Developer Experience</strong> really good for the current team so it’s a joy to work with.'
     },
@@ -99,7 +99,7 @@ var content = {
             description:
                 'A web application that act as a matchmaking tool to find the best candidate of insourced consultants and employees for a given client and project. Also a back-office module for administrators and consultants to manage their skills, CVs, personal video, details etc.',
             me:
-                'Responsible for building the full experience, ie. the client, a responsive web app that\'s both fast and intuitive to use, and the server with business logic, a nodejs app with mongodb as persistence.',
+                "Responsible for building the full experience, ie. the client, a responsive web app that's both fast and intuitive to use, and the server with business logic, a nodejs app with mongodb as persistence.",
             tags: [
                 'javascript',
                 'angular',
@@ -145,7 +145,7 @@ var content = {
         {
             title: 'Digitalization and Advisory Cockpit Tool for Nordea Bank',
             description:
-                'Advisory Cockpit Tool to be used by advisors and help digitize an advisor\'s everyday. The bar was set very high and the application should not only contain a lot of functionality to simplify the days of an advisor, but the end result will also be a great user experience.',
+                "Advisory Cockpit Tool to be used by advisors and help digitize an advisor's everyday. The bar was set very high and the application should not only contain a lot of functionality to simplify the days of an advisor, but the end result will also be a great user experience.",
             me:
                 'Development and architecture of the frontend and BFF part of the application. Setting up fast and solid development experience and in general building the foundation of an easy to develop and maintain system. Daily work with building pages and components together with API design.',
             tags: [
@@ -247,7 +247,7 @@ var content = {
         {
             title: 'Risk Calculator for Nordea Bank',
             description:
-                'A system for calculating risk and return, both based on a customer\'s current portfolio but also on a better allocated portfolio that will be recommended to the customer.',
+                "A system for calculating risk and return, both based on a customer's current portfolio but also on a better allocated portfolio that will be recommended to the customer.",
             me:
                 'Full stack developer of the entire system, although primarily responsible for frontend and API, together with being a happy team player working very close to the end user to guarantee the best result.',
             tags: [
@@ -279,7 +279,7 @@ var content = {
         {
             title: 'Multi portfolio for Nordea Bank',
             description:
-                'Portfolio analysis system extended to support structuring a customer\'s total engagement in different portfolios to be able to twist and turn the customers current assets.',
+                "Portfolio analysis system extended to support structuring a customer's total engagement in different portfolios to be able to twist and turn the customers current assets.",
             me:
                 'Development and Scrum Master making sure that the team delivers what the end user expects with good code quality.',
             tags: [
@@ -307,7 +307,7 @@ var content = {
         {
             title: 'Customized analysis and recommendation for Nordea Bank',
             description:
-                'A system for doing customized analysis, optimization and recommendation of customer\'s current portfolio to be able to recommend a better portfolio that can give a higher return with a lower risk. <a href=\'https://medium.com/@perjansson/offshoring-from-the-scream-to-friendship-and-success-5b409c30d287\' target=\'_blank\' rel=\'noopener noreferrer\'>Blog post about project on Medium</a>.',
+                "A system for doing customized analysis, optimization and recommendation of customer's current portfolio to be able to recommend a better portfolio that can give a higher return with a lower risk. <a href='https://medium.com/@perjansson/offshoring-from-the-scream-to-friendship-and-success-5b409c30d287' target='_blank' rel='noopener noreferrer'>Blog post about project on Medium</a>.",
             me:
                 'Development and architecture of the system. Being UX and front end responsible to make the system easy and fast to use. Be proactive in efforts to get a distributed team between Sweden, Denmark and India to work.',
             tags: [
@@ -492,7 +492,8 @@ var content = {
             ]
         },
         {
-            title: 'Bank officers secure communication for Länsförsäkringar Bank',
+            title:
+                'Bank officers secure communication for Länsförsäkringar Bank',
             description:
                 'a system to enable a secure communication channel between bank officers and bank customers via the internet bank and an internal bank officer application.',
             me: 'Developer with front end responsibility.',
@@ -530,5 +531,3 @@ var content = {
         }
     ]
 };
-
-window.content = content;
