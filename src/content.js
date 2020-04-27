@@ -44,6 +44,28 @@ export default {
 
     projects: [
         {
+            title: 'Panasonic Avionics Corporation',
+            description:
+                'Platform to enable airplane passengers to attain wireless internet connectivity.',
+            me:
+                'Software developer helping Panasonic developing new services to enable airplane passengers to attain wireless internet connectivity. Daily work consists of implementing new features and at the same time gradually modernizing the technical solution as well as helping the development team build a solution that will be a solid platform for the future.',
+            tags: [
+                'typescript',
+                'react',
+                'redux',
+                'material-ui',
+                'storybook',
+                'jest',
+                'react-testing-library',
+                'cypress',
+                'node',
+                'npm',
+                'lerna',
+                'gitlab',
+                'docker'
+            ]
+        },
+        {
             title: 'HBO GO app',
             description:
                 'HBO GO client in US for TV platforms: Samsung Orsay, TiVo set-top box and Hotels (LG and Enseo devices). A web application using HTML, CSS, and TypeScript. Frameworks and libraries used are React, Redux, Styled Components and Ramda. It is built using Grunt and Browserify.',
