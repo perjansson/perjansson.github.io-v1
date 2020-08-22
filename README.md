@@ -21,5 +21,5 @@ Navigate to [localhost:5000](http://localhost:5000). You should see your app run
 ### Build for production
 
 ```bash
-npm run build
+npm run build:prod
 ```

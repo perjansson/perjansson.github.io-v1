@@ -3,7 +3,8 @@ import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
-import { generateSW } from "rollup-plugin-workbox";
+import replace from "@rollup/plugin-replace";
+import { injectManifest } from "rollup-plugin-workbox";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -16,6 +17,8 @@ export default {
     file: "public/bundle.js",
   },
   plugins: [
+    replace({ "sw.path": production ? "/public/sw.js" : "/sw.js" }),
+
     svelte({
       // enable run-time checks when not in production
       dev: !production,
@@ -42,24 +45,11 @@ export default {
     // instead of npm run dev), minify
     production && terser(),
 
-    generateSW({
+    injectManifest({
+      swSrc: "build/sw.js",
       swDest: "public/sw.js",
       globDirectory: "public/",
-      globPatterns: ["**/*.{html,json,js,css}"],
-      skipWaiting: true,
-      clientsClaim: true,
-      runtimeCaching: [
-        {
-          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-          handler: "CacheFirst",
-          options: {
-            cacheName: "images",
-            expiration: {
-              maxEntries: 10,
-            },
-          },
-        },
-      ],
+      mode: production ? "production" : "development",
     }),
   ],
   watch: {
