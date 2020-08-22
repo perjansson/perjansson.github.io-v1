@@ -101,7 +101,7 @@
 
 <div class="projects-container" bind:this={containerEl}>
   <div class="header" bind:this={header} on:click={scrollToHeader}>
-    <div class="bounce">Stuff I've done ▼▼</div>
+    <div class="bounce">Stuff I've done ▼</div>
   </div>
   <ol class="list">
     {#each projects as project, i}

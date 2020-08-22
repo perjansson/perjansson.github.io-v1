@@ -39,6 +39,7 @@
     display: flex;
     flex-direction: row;
     transition: opacity 400ms ease-in-out;
+    margin: 5%;
   }
 
   .description {
@@ -54,7 +55,7 @@
 
   .long .description {
     flex: 9;
-    font-size: 1.1em;
+    font-size: 1.3em;
     line-height: 1.5em;
   }
 
@@ -75,6 +76,26 @@
 
     .long .description {
       font-size: 0.9em;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .short .description {
+      font-size: 2.4em;
+    }
+
+    .long .description {
+      font-size: 1.2em;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    .short .description {
+      font-size: 1.8em;
+    }
+
+    .long .description {
+      font-size: 0.7em;
     }
   }
 
