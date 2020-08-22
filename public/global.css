@@ -16,6 +16,10 @@ tablet portrait     @media (min-width: 768px) and (max-width: 1024px) {}
 mobile              @media (min-width: 320px) and (max-width: 480px) {}
 */
 
+:root {
+  --connectivity-color: transparent;
+}
+
 * {
   /* font-family: "Source Code Pro", monospace; */
   font-family: "Roboto Mono", monospace;
@@ -41,6 +45,7 @@ body {
   font-size: 22px;
   height: 100%;
   color: #000;
+  background-color: var(--connectivity-color);
 }
 
 a:link,
@@ -78,7 +83,7 @@ strong {
   font-weight: 600;
 }
 
-@keyframes flicker {
+/* @keyframes flicker {
   0%,
   100% {
     opacity: 1;
@@ -109,4 +114,4 @@ strong {
 
 .flicker {
   animation: flicker 1000ms linear 7s both;
-}
+} */
