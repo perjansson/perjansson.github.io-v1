@@ -50,14 +50,16 @@ export default {
       me:
         "Software developer helping Panasonic developing new services to enable airplane passengers to attain wireless internet connectivity. Daily work consists of implementing new features and at the same time gradually modernizing the technical solution as well as helping the development team build a solution that will be a solid platform for the future.",
       tags: [
-        "typescript",
+        "javascript",
         "react",
         "redux",
+        "redux-saga",
         "material-ui",
         "storybook",
         "jest",
         "react-testing-library",
         "cypress",
+        "cucumber",
         "node",
         "npm",
         "lerna",
