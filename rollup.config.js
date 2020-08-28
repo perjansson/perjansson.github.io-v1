@@ -49,6 +49,7 @@ export default {
       swSrc: "build/sw.js",
       swDest: "public/sw.js",
       globDirectory: "public/",
+      globIgnores: ["index.html"],
       mode: production ? "production" : "development",
     }),
   ],
